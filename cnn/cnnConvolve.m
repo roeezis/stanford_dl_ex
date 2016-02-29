@@ -60,10 +60,10 @@ for imageNum = 1:numImages
     convolvedImage(:) = conv2(im,filter,'valid');
     
     % Add the bias unit
-    convolvedImage(:) = convolvedImage(:) + b(filterNum);
     % Then, apply the sigmoid function to get the hidden activation
 
     %%% YOUR CODE HERE %%%
+    convolvedImage(:) = convolvedImage(:) + b(filterNum);
     convolvedImage(:) = sigmoid(convolvedImage);
 
     
